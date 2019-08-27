@@ -40,6 +40,9 @@ map h <C-w>h
 map j <C-w>j
 map k <C-w>k
 map l <C-w>l
+map + <C-w>+
+map = <C-w>=
+map - <C-w>-
 
 " 编辑器模式下复制新行
 imap <C-d> <Esc>Vypi
