@@ -8,8 +8,6 @@ map q :q<CR>
 " map w :w<cr>
 " map b <c-v>
 
-map t :tabe<space>
-
 " 使光标位置屏幕中间位置
 map j gjzz
 map k gkzz
@@ -43,6 +41,11 @@ map l <C-w>l
 map + <C-w>+
 map = <C-w>=
 map - <C-w>-
+
+" 切换标签页
+map t :tabe<space>
+map H gT
+map L gt
 
 " 编辑器模式下复制新行
 imap <C-d> <Esc>Vypi
