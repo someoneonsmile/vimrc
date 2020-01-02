@@ -38,9 +38,20 @@ map h <C-w>h
 map j <C-w>j
 map k <C-w>k
 map l <C-w>l
+
+" 分屏当前文件
+map s <C-w>s
+map v <C-w>v
+
+" 窗口高度 ("=" 使所有窗口等高) 
 map + <C-w>+
 map = <C-w>=
 map - <C-w>-
+
+" 窗口宽度
+map < <C-w><
+map > <C-w>>
+
 
 " 切换标签页
 map t :tabe<space>
