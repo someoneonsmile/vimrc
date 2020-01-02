@@ -31,13 +31,19 @@ map <C-h> :NERDTreeToggle<CR>
 map <C-e> :MRU<CR>
 
 
-" 切换窗口 
 " ^[ = Alt
+" 切换窗口 
 map w <C-w>w
 map h <C-w>h
 map j <C-w>j
 map k <C-w>k
 map l <C-w>l
+
+" 移动窗口
+map H <C-w>H
+map J <C-w>J
+map K <C-w>K
+map L <C-w>L
 
 " 分屏当前文件
 map s <C-w>s
