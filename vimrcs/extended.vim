@@ -31,12 +31,18 @@ set guioptions-=L
 set background=dark
 colorscheme peaksea
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fast editing and reloading of vimrc configs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>e :e! ~/.vim_runtime/my_configs.vim<cr>
 autocmd! bufwritepost ~/.vim_runtime/my_configs.vim source ~/.vim_runtime/my_configs.vim
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Fast editing and reloading of vimrc configs
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <leader>g :e! ~/.vim_runtime/my_plugins.vim<cr>
+autocmd! bufwritepost ~/.vim_runtime/my_plugins.vim source ~/.vim_runtime/my_plugins.vim
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
