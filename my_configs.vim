@@ -68,6 +68,7 @@ map <C-e> :MRU<CR>
 " 切换窗口 
 " ^[ = Alt
 map <A-w> <C-w>w
+map <A-p> <C-w>p
 map <A-h> <C-w>h
 map <A-j> <C-w>j
 map <A-k> <C-w>k
@@ -78,13 +79,40 @@ map <A--> <C-w>-
 map <A-<> <C-w><
 map <A->> <C-w>>
 
+" <C-w> o 关闭其它所有窗口 :only
+" :qa 关闭所有分屏
 map <A-L> <C-w>L
-map <A-H> <C-w>H
 map <A-J> <C-w>J
+map <A-H> <C-w>H
 map <A-K> <C-w>K
 
 map <A-s> <C-w>s
 map <A-v> <C-w>v
+
+
+" 终端模式
+set termwinkey=<C-w>
+tmap <Esc> <C-w>N 
+tmap <A-w> <C-w>w
+tmap <A-p> <C-w>p
+tmap <A-h> <C-w>h
+tmap <A-j> <C-w>j
+tmap <A-k> <C-w>k
+tmap <A-l> <C-w>l
+tmap <A-+> <C-w>+
+tmap <A-=> <C-w>=
+tmap <A--> <C-w>-
+tmap <A-<> <C-w><
+tmap <A->> <C-w>>
+
+tmap <A-L> <C-w>L
+tmap <A-J> <C-w>J
+tmap <A-H> <C-w>H
+tmap <A-K> <C-w>K
+
+tmap <A-s> <C-w>s
+tmap <A-v> <C-w>v
+
 
 " 切换标签页
 map t :tabe<space>
