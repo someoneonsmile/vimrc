@@ -34,4 +34,7 @@ Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries'}
 " 切换终端
 Plug 'PangPangPangPangPang/vim-terminal'
 
+" Ack
+Plug 'mileszs/ack.vim'
+
 call plug#end()

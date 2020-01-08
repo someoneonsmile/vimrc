@@ -37,6 +37,8 @@ set clipboard+=unnamed
 set ts=4
 set nu
 
+" set shell=$PROGRAMW64/Git/bin/bash.exe
+
 map q :q<CR>
 
 " map w :w<cr>
@@ -92,7 +94,7 @@ map <A-v> <C-w>v
 
 " 终端模式
 set termwinkey=<C-w>
-tmap <Esc> <C-w>N 
+tmap <Esc> <C-\><C-n>
 tmap <A-w> <C-w>w
 tmap <A-p> <C-w>p
 tmap <A-h> <C-w>h
@@ -121,3 +123,4 @@ map L gt
 
 " 编辑器模式下复制新行
 imap <C-d> <Esc>Vypi
+
