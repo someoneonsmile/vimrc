@@ -37,7 +37,7 @@ set clipboard+=unnamed
 set ts=4
 set nu
 
-" set shell=$PROGRAMW64/Git/bin/bash.exe
+set shell=powershell
 
 map q :q<CR>
 
