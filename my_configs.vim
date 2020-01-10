@@ -37,14 +37,26 @@ tmap <C-e> :MRU<CR>
 cmap <C-p> <Up>
 cmap <C-n> <Down>
 
-" 切换窗口 
 " ^[ = Alt
+" 切换窗口 
 map w <C-w>w
 map p <C-w>p
 map h <C-w>h
 map j <C-w>j
 map k <C-w>k
 map l <C-w>l
+
+" 移动窗口
+map H <C-w>H
+map J <C-w>J
+map K <C-w>K
+map L <C-w>L
+
+" 分屏当前文件
+map s <C-w>s
+map v <C-w>v
+
+" 窗口高度 ("=" 使所有窗口等高) 
 map + <C-w>+
 map = <C-w>=
 map - <C-w>-
@@ -89,6 +101,11 @@ tmap s <C-w>s
 tmap v <C-w>v
 tmap o <C-w>o
 tmap c <C-w>c
+
+" 窗口宽度
+map < <C-w><
+map > <C-w>>
+
 
 " 切换标签页
 map t :tabe<space>
