@@ -39,10 +39,10 @@ set nu
 
 set shell=powershell
 
-map q :q<CR>
-
-" map w :w<cr>
-" map b <c-v>
+map <leader>q :q!<CR>
+" map q :q<CR>
+" map w :w<CR>
+" map b <C-v>
 
 " 使光标位置屏幕中间位置
 map j gjzz
@@ -60,6 +60,11 @@ map <C-a> ggVG
 map <tab> V>
 map <S-tab> V<
 map <C-tab> gt
+
+" 命令行上下选择
+cmap <C-p> <Up>
+cmap <C-n> <Down>
+
 
 " 切换目录树窗口
 map <C-h> :NERDTreeToggle<CR>
@@ -83,9 +88,9 @@ map <A->> <C-w>>
 
 " <C-w> o 关闭其它所有窗口 :only
 " :qa 关闭所有分屏
+map <A-H> <C-w>H
 map <A-L> <C-w>L
 map <A-J> <C-w>J
-map <A-H> <C-w>H
 map <A-K> <C-w>K
 
 map <A-s> <C-w>s
