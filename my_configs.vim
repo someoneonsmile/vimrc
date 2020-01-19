@@ -95,6 +95,8 @@ map <A-K> <C-w>K
 
 map <A-s> <C-w>s
 map <A-v> <C-w>v
+map <A-c> <C-w>c
+map <A-o> <C-w>o
 
 
 " 终端模式
@@ -119,6 +121,8 @@ tmap <A-K> <C-w>K
 
 tmap <A-s> <C-w>s
 tmap <A-v> <C-w>v
+tmap <A-c> <C-w>c
+tmap <A-o> <C-w>o
 
 
 " 切换标签页
