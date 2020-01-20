@@ -4,6 +4,8 @@ set ts=4
 set nu
 
 map q :q<CR>
+map <leader>q :q!<CR>
+map <leader>w :w!<CR>
 
 " map w :w<cr>
 " map b <c-v>
@@ -56,7 +58,7 @@ map L <C-w>L
 map s <C-w>s
 map v <C-w>v
 
-" 窗口高度 ("=" 使所有窗口等高) 
+" 窗口高度 ("=" 使所有窗口等宽高) 
 map + <C-w>+
 map = <C-w>=
 map - <C-w>-
