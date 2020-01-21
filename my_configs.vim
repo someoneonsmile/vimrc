@@ -70,8 +70,10 @@ cmap <C-n> <Down>
 
 " 切换目录树窗口
 map <C-h> :NERDTreeToggle<CR>
+tmap <C-h> :NERDTreeToggle<CR>
 " 最近文件
 map <C-e> :MRU<CR>
+tmap <C-e> :MRU<CR>
 
 
 " 切换窗口 
@@ -94,6 +96,7 @@ map <A-H> <C-w>H
 map <A-L> <C-w>L
 map <A-J> <C-w>J
 map <A-K> <C-w>K
+map <A-T> <C-w>T
 
 map <A-s> <C-w>s
 map <A-v> <C-w>v
@@ -120,6 +123,7 @@ tmap <A-L> <C-w>L
 tmap <A-J> <C-w>J
 tmap <A-H> <C-w>H
 tmap <A-K> <C-w>K
+tmap <A-T> <C-w>T
 
 tmap <A-s> <C-w>s
 tmap <A-v> <C-w>v
