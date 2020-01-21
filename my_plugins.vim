@@ -1,4 +1,3 @@
-
 call plug#begin('~/.vim/plugged')
 
 """ {{{ 文本对象
@@ -36,5 +35,11 @@ Plug 'PangPangPangPangPang/vim-terminal'
 
 " Ack
 Plug 'mileszs/ack.vim'
+
+" deoplete 自动补全
+Plug 'Shougo/deoplete.nvim'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
+let g:deoplete#enable_at_startup = 1
 
 call plug#end()

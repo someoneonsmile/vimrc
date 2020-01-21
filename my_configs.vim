@@ -31,15 +31,22 @@ set backspace=indent,eol,start whichwrap+=<,>,[,]
 set winaltkeys=no
 " }}}
 
+set encoding=utf-8
+
+" 提示的时候预览有问题, 关掉
+set completeopt-=preview
+autocmd CompleteDone * pclose
+
 " 设置 python3 支持
 let &pythonthreedll = 'D:\Program Files (x86)\Python37-32\python37.dll'
+let g:python3_host_prog = 'D:\Program Files (x86)\Python37-32\python.exe'
 
 " 使用系统剪贴板
 set clipboard+=unnamed
 set ts=4
 set nu
 
-set shell=powershell
+" set shell=powershell
 
 map <leader>q :q!<CR>
 " map q :q<CR>
