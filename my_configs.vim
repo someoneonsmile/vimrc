@@ -31,6 +31,8 @@ set backspace=indent,eol,start whichwrap+=<,>,[,]
 set winaltkeys=no
 " }}}
 
+" 设置 python3 支持
+let &pythonthreedll = 'D:\Program Files (x86)\Python37-32\python37.dll'
 
 " 使用系统剪贴板
 set clipboard+=unnamed
