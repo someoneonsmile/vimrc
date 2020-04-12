@@ -139,7 +139,7 @@ tmap <A-o> <C-w>o
 
 
 " 切换标签页
-map t :tabe<space>
+" map t :tabe<space>, 会影响 `t` 的使用, 改为 `<A-t>` => `<C-w>t`
 map H gT
 map L gt
 
