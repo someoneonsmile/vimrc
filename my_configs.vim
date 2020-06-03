@@ -16,42 +16,64 @@
     " 字体
     set guifont=Consolas:h12
 
+    " 全屏
+    au GUIEnter * simalt ~x
 " }}}
 
 " General {{{
-set nocompatible
-set nobackup
-set noswapfile
-set history=1024
-set autochdir
-set whichwrap=b,s,<,>,[,]
-set nobomb
-set backspace=indent,eol,start whichwrap+=<,>,[,]
-" 设置 alt 键不映射到菜单栏
-set winaltkeys=no
+    set nocompatible
+    set nobackup
+    set noswapfile
+    set history=1024
+    set autochdir
+    set whichwrap=b,s,<,>,[,]
+    set nobomb
+    set backspace=indent,eol,start whichwrap+=<,>,[,]
+    set encoding=utf-8
+    " 设置 alt 键不映射到菜单栏
+    set winaltkeys=no
 " }}}
 
-set encoding=utf-8
 
-" 提示的时候预览有问题, 关掉
-set completeopt-=preview
-autocmd CompleteDone * pclose
+" device 相关 {{{
+    " 提示的时候预览有问题, 关掉
+    set completeopt-=preview
+    autocmd CompleteDone * pclose
 
-" 设置 python3 支持
-let &pythonthreedll = 'D:\Program Files (x86)\Python37-32\python37.dll'
-let g:python3_host_prog = 'D:\Program Files (x86)\Python37-32\python.exe'
+    " 设置 python3 支持
+    let &pythonthreedll = 'D:\Program Files (x86)\Python37-32\python37.dll'
+    let g:python3_host_prog = 'D:\Program Files (x86)\Python37-32\python.exe'
+
+    " shell
+    " set shell=powershell
+" }}}
+
+
+" leader key
+let mapleader=","
 
 " 使用系统剪贴板
 set clipboard+=unnamed
 set ts=4
 set nu
 
-" set shell=powershell
+set foldlevelstart=999
 
-map <leader>q :q!<CR>
-" map q :q<CR>
-" map w :w<CR>
-" map b <C-v>
+" 强制保存/退出 {{{
+    map <leader>q :q!<CR>
+
+    " 文件保存没有权限时
+    " :W sudo saves the file 
+    " (useful for handling the permission-denied error)
+    command! W w !sudo tee % > /dev/null
+" }}}
+
+
+" 语法折叠 {{{
+    set foldmethod=syntax
+    set foldlevelstart=999
+" }}}
+
 
 " 使光标位置屏幕中间位置
 map j gjzz
@@ -59,90 +81,88 @@ map k gkzz
 map * *zz
 map # #zz
 map n nzz
-map <S-n> <S-n>zz
-map <C-o> <C-o>zz
-map <C-i> <C-i>zz
-
-map <C-a> ggVG
-
-" 缩进
-map <tab> V>
-map <S-tab> V<
-map <C-tab> gt
+noremap <S-n> <S-n>zz
+noremap <C-o> <C-o>zz
+noremap <C-i> <C-i>zz
 
 " 命令行上下选择
 cmap <C-p> <Up>
 cmap <C-n> <Down>
 
-
 " 切换目录树窗口
 map <C-h> :NERDTreeToggle<CR>
 tmap <C-h> :NERDTreeToggle<CR>
+
 " 最近文件
 map <C-e> :MRU<CR>
 tmap <C-e> :MRU<CR>
 
+" 打开的 buffer
+map <c-b> :CtrlPBuffer<cr>
 
 " 切换窗口 
 " ^[ = Alt
-map <A-w> <C-w>w
-map <A-p> <C-w>p
-map <A-h> <C-w>h
-map <A-j> <C-w>j
-map <A-k> <C-w>k
-map <A-l> <C-w>l
-map <A-+> <C-w>+
-map <A-=> <C-w>=
-map <A--> <C-w>-
-map <A-<> <C-w><
-map <A->> <C-w>>
+map <M-w> <C-w>w
+map <M-p> <C-w>p
+map <M-h> <C-w>h
+map <M-j> <C-w>j
+map <M-k> <C-w>k
+map <M-l> <C-w>l
+map <M-+> <C-w>+
+map <M-=> <C-w>=
+map <M--> <C-w>-
+map <M-<> <C-w><
+map <M->> <C-w>>
 
 " <C-w> o 关闭其它所有窗口 :only
 " :qa 关闭所有分屏
-map <A-H> <C-w>H
-map <A-L> <C-w>L
-map <A-J> <C-w>J
-map <A-K> <C-w>K
-map <A-T> <C-w>T
+map <M-H> <C-w>H
+map <M-L> <C-w>L
+map <M-J> <C-w>J
+map <M-K> <C-w>K
+map <M-T> <C-w>T
 
-map <A-s> <C-w>s
-map <A-v> <C-w>v
-map <A-c> <C-w>c
-map <A-o> <C-w>o
+map <M-s> <C-w>s
+map <M-v> <C-w>v
+map <M-c> <C-w>c
+map <M-o> <C-w>o
 
 
 " 终端模式
 set termwinkey=<C-w>
 tmap <Esc> <C-\><C-n>
-tmap <A-w> <C-w>w
-tmap <A-p> <C-w>p
-tmap <A-h> <C-w>h
-tmap <A-j> <C-w>j
-tmap <A-k> <C-w>k
-tmap <A-l> <C-w>l
-tmap <A-+> <C-w>+
-tmap <A-=> <C-w>=
-tmap <A--> <C-w>-
-tmap <A-<> <C-w><
-tmap <A->> <C-w>>
+tmap <M-w> <C-w>w
+tmap <M-p> <C-w>p
+tmap <M-h> <C-w>h
+tmap <M-j> <C-w>j
+tmap <M-k> <C-w>k
+tmap <M-l> <C-w>l
+tmap <M-+> <C-w>+
+tmap <M-=> <C-w>=
+tmap <M--> <C-w>-
+tmap <M-<> <C-w><
+tmap <M->> <C-w>>
 
-tmap <A-L> <C-w>L
-tmap <A-J> <C-w>J
-tmap <A-H> <C-w>H
-tmap <A-K> <C-w>K
-tmap <A-T> <C-w>T
+tmap <M-L> <C-w>L
+tmap <M-J> <C-w>J
+tmap <M-H> <C-w>H
+tmap <M-K> <C-w>K
+tmap <M-T> <C-w>T
 
-tmap <A-s> <C-w>s
-tmap <A-v> <C-w>v
-tmap <A-c> <C-w>c
-tmap <A-o> <C-w>o
+tmap <M-s> <C-w>s
+tmap <M-v> <C-w>v
+tmap <M-c> <C-w>c
+tmap <M-o> <C-w>o
 
 
 " 切换标签页
-map t :tabe<space>
+nnoremap <leader>t :tabe<space>
 map H gT
 map L gt
 
 " 编辑器模式下复制新行
 imap <C-d> <Esc>Vypi
+
+" 添加文件后缀类型
+set suffixesadd+=.js
 

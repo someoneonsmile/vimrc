@@ -127,7 +127,7 @@ endif
 vnoremap <silent> gv :call VisualSelection('gv', '')<CR>
 
 " Open Ack and put the cursor in the right position
-map <leader>g :Ack 
+" map <leader>g :Ack 
 
 " When you press <leader>r you can search and replace the selected text
 vnoremap <silent> <leader>r :call VisualSelection('replace', '')<CR>
@@ -143,10 +143,10 @@ vnoremap <silent> <leader>r :call VisualSelection('replace', '')<CR>
 " To go to the previous search results do:
 "   <leader>p
 "
-map <leader>cc :botright cope<cr>
-map <leader>co ggVGy:tabnew<cr>:set syntax=qf<cr>pgg
-map <leader>n :cn<cr>
-map <leader>p :cp<cr>
+" map <leader>cc :botright cope<cr>
+" map <leader>co ggVGy:tabnew<cr>:set syntax=qf<cr>pgg
+" map <leader>n :cn<cr>
+" map <leader>p :cp<cr>
 
 " Make sure that enter is never overriden in the quickfix window
 autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
