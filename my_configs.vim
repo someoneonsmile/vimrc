@@ -22,16 +22,113 @@
 
 " General {{{
     set nocompatible
-    set nobackup
-    set noswapfile
     set history=1024
     set autochdir
-    set whichwrap=b,s,<,>,[,]
     set nobomb
-    set backspace=indent,eol,start whichwrap+=<,>,[,]
-    set encoding=utf-8
     " 设置 alt 键不映射到菜单栏
     set winaltkeys=no
+
+    " Enable filetype plugins
+    filetype plugin on
+    filetype indent on
+
+    " Set to auto read when a file is changed from the outside
+    set autoread
+
+    " With a map leader it's possible to do extra key combinations
+    " like <leader>w saves the current file
+    let mapleader = ","
+
+    " Fast saving
+    nmap <leader>w :w!<cr>
+
+    "Always show current position
+    set ruler
+
+    " Height of the command bar
+    set cmdheight=2
+
+    " A buffer becomes hidden when it is abandoned
+    set hid
+
+    " Configure backspace so it acts as it should act
+    set backspace=eol,start,indent
+    set whichwrap+=<,>,h,l
+
+    " Ignore case when searching
+    set ignorecase
+
+    " When searching try to be smart about cases 
+    set smartcase
+
+    " Highlight search results
+    set hlsearch
+
+    " Makes search act like search in modern browsers
+    set incsearch 
+
+    " Don't redraw while executing macros (good performance config)
+    set lazyredraw 
+
+    " For regular expressions turn magic on
+    set magic
+
+    " Show matching brackets when text indicator is over them
+    set showmatch 
+
+    " How many tenths of a second to blink when matching brackets
+    set mat=2
+
+    " No annoying sound on errors
+    set noerrorbells
+    set novisualbell
+    set t_vb=
+    set tm=500
+
+    " Properly disable sound on errors on MacVim
+    if has("gui_macvim")
+        autocmd GUIEnter * set vb t_vb=
+    endif
+
+    " Add a bit extra margin to the left
+    set foldcolumn=1
+
+    " Set utf8 as standard encoding and en_US as the standard language
+    set encoding=utf8
+
+    " Use Unix as the standard file type
+    set ffs=unix,dos,mac
+
+
+    """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    " => Files, backups and undo
+    """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    " Turn backup off, since most stuff is in SVN, git et.c anyway...
+    set nobackup
+    set nowb
+    set noswapfile
+
+
+    """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    " => Text, tab and indent related
+    """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    " Use spaces instead of tabs
+    set expandtab
+
+    " Be smart when using tabs ;)
+    set smarttab
+
+    " 1 tab == 4 spaces
+    set shiftwidth=4
+    set tabstop=4
+
+    " Linebreak on 500 characters
+    set lbr
+    set tw=500
+
+    set ai "Auto indent
+    set si "Smart indent
+    set wrap "Wrap lines
 " }}}
 
 
@@ -41,8 +138,8 @@
     autocmd CompleteDone * pclose
 
     " 设置 python3 支持
-    let &pythonthreedll = 'D:\Program Files (x86)\Python37-32\python37.dll'
-    let g:python3_host_prog = 'D:\Program Files (x86)\Python37-32\python.exe'
+    " let &pythonthreedll = 'D:\Program Files (x86)\Python37-32\python37.dll'
+    " let g:python3_host_prog = 'D:\Program Files (x86)\Python37-32\python.exe'
 
     " shell
     " set shell=powershell
@@ -105,57 +202,57 @@ map <c-b> :CtrlPBuffer<cr>
 
 " 切换窗口 
 " ^[ = Alt
-map <^[-w> <C-w>w
-map <^[-p> <C-w>p
-map <^[-h> <C-w>h
-map <^[-j> <C-w>j
-map <^[-k> <C-w>k
-map <^[-l> <C-w>l
-map <^[-+> <C-w>+
-map <^[-=> <C-w>=
-map <^[--> <C-w>-
-map <^[-<> <C-w><
-map <^[->> <C-w>>
+map <M-w> <C-w>w
+map <M-p> <C-w>p
+map <M-h> <C-w>h
+map <M-j> <C-w>j
+map <M-k> <C-w>k
+map <M-l> <C-w>l
+map <M-+> <C-w>+
+map <M-=> <C-w>=
+map <M--> <C-w>-
+map <M-<> <C-w><
+map <M->> <C-w>>
 
 " <C-w> o 关闭其它所有窗口 :only
 " :qa 关闭所有分屏
-map <^[-H> <C-w>H
-map <^[-L> <C-w>L
-map <^[-J> <C-w>J
-map <^[-K> <C-w>K
-map <^[-T> <C-w>T
+map <M-H> <C-w>H
+map <M-L> <C-w>L
+map <M-J> <C-w>J
+map <M-K> <C-w>K
+map <M-T> <C-w>T
 
-map <^[-s> <C-w>s
-map <^[-v> <C-w>v
-map <^[-c> <C-w>c
-map <^[-o> <C-w>o
+map <M-s> <C-w>s
+map <M-v> <C-w>v
+map <M-c> <C-w>c
+map <M-o> <C-w>o
 
 
 " 终端模式
-set termwinkey=<C-w>
+" set termwinkey=<C-w>
 tmap <Esc> <C-\><C-n>
-tmap <^[-w> <C-w>w
-tmap <^[-p> <C-w>p
-tmap <^[-h> <C-w>h
-tmap <^[-j> <C-w>j
-tmap <^[-k> <C-w>k
-tmap <^[-l> <C-w>l
-tmap <^[-+> <C-w>+
-tmap <^[-=> <C-w>=
-tmap <^[--> <C-w>-
-tmap <^[-<> <C-w><
-tmap <^[->> <C-w>>
+tmap <M-w> <C-w>w
+tmap <M-p> <C-w>p
+tmap <M-h> <C-w>h
+tmap <M-j> <C-w>j
+tmap <M-k> <C-w>k
+tmap <M-l> <C-w>l
+tmap <M-+> <C-w>+
+tmap <M-=> <C-w>=
+tmap <M--> <C-w>-
+tmap <M-<> <C-w><
+tmap <M->> <C-w>>
 
-tmap <^[-L> <C-w>L
-tmap <^[-J> <C-w>J
-tmap <^[-H> <C-w>H
-tmap <^[-K> <C-w>K
-tmap <^[-T> <C-w>T
+tmap <M-L> <C-w>L
+tmap <M-J> <C-w>J
+tmap <M-H> <C-w>H
+tmap <M-K> <C-w>K
+tmap <M-T> <C-w>T
 
-tmap <^[-s> <C-w>s
-tmap <^[-v> <C-w>v
-tmap <^[-c> <C-w>c
-tmap <^[-o> <C-w>o
+tmap <M-s> <C-w>s
+tmap <M-v> <C-w>v
+tmap <M-c> <C-w>c
+tmap <M-o> <C-w>o
 
 
 " 切换标签页
