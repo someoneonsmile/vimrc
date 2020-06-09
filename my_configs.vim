@@ -97,62 +97,65 @@ tmap <C-h> :NERDTreeToggle<CR>
 map <C-e> :MRU<CR>
 tmap <C-e> :MRU<CR>
 
+" 注释
+map <C-m> <Plug>NERDCommenterToggle
+
 " 打开的 buffer
 map <c-b> :CtrlPBuffer<cr>
 
 " 切换窗口 
 " ^[ = Alt
-map <M-w> <C-w>w
-map <M-p> <C-w>p
-map <M-h> <C-w>h
-map <M-j> <C-w>j
-map <M-k> <C-w>k
-map <M-l> <C-w>l
-map <M-+> <C-w>+
-map <M-=> <C-w>=
-map <M--> <C-w>-
-map <M-<> <C-w><
-map <M->> <C-w>>
+map <^[-w> <C-w>w
+map <^[-p> <C-w>p
+map <^[-h> <C-w>h
+map <^[-j> <C-w>j
+map <^[-k> <C-w>k
+map <^[-l> <C-w>l
+map <^[-+> <C-w>+
+map <^[-=> <C-w>=
+map <^[--> <C-w>-
+map <^[-<> <C-w><
+map <^[->> <C-w>>
 
 " <C-w> o 关闭其它所有窗口 :only
 " :qa 关闭所有分屏
-map <M-H> <C-w>H
-map <M-L> <C-w>L
-map <M-J> <C-w>J
-map <M-K> <C-w>K
-map <M-T> <C-w>T
+map <^[-H> <C-w>H
+map <^[-L> <C-w>L
+map <^[-J> <C-w>J
+map <^[-K> <C-w>K
+map <^[-T> <C-w>T
 
-map <M-s> <C-w>s
-map <M-v> <C-w>v
-map <M-c> <C-w>c
-map <M-o> <C-w>o
+map <^[-s> <C-w>s
+map <^[-v> <C-w>v
+map <^[-c> <C-w>c
+map <^[-o> <C-w>o
 
 
 " 终端模式
 set termwinkey=<C-w>
 tmap <Esc> <C-\><C-n>
-tmap <M-w> <C-w>w
-tmap <M-p> <C-w>p
-tmap <M-h> <C-w>h
-tmap <M-j> <C-w>j
-tmap <M-k> <C-w>k
-tmap <M-l> <C-w>l
-tmap <M-+> <C-w>+
-tmap <M-=> <C-w>=
-tmap <M--> <C-w>-
-tmap <M-<> <C-w><
-tmap <M->> <C-w>>
+tmap <^[-w> <C-w>w
+tmap <^[-p> <C-w>p
+tmap <^[-h> <C-w>h
+tmap <^[-j> <C-w>j
+tmap <^[-k> <C-w>k
+tmap <^[-l> <C-w>l
+tmap <^[-+> <C-w>+
+tmap <^[-=> <C-w>=
+tmap <^[--> <C-w>-
+tmap <^[-<> <C-w><
+tmap <^[->> <C-w>>
 
-tmap <M-L> <C-w>L
-tmap <M-J> <C-w>J
-tmap <M-H> <C-w>H
-tmap <M-K> <C-w>K
-tmap <M-T> <C-w>T
+tmap <^[-L> <C-w>L
+tmap <^[-J> <C-w>J
+tmap <^[-H> <C-w>H
+tmap <^[-K> <C-w>K
+tmap <^[-T> <C-w>T
 
-tmap <M-s> <C-w>s
-tmap <M-v> <C-w>v
-tmap <M-c> <C-w>c
-tmap <M-o> <C-w>o
+tmap <^[-s> <C-w>s
+tmap <^[-v> <C-w>v
+tmap <^[-c> <C-w>c
+tmap <^[-o> <C-w>o
 
 
 " 切换标签页

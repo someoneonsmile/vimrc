@@ -33,6 +33,13 @@ let g:NERDTreeWinPos = "right"
 let NERDTreeShowHidden=0
 let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 let g:NERDTreeWinSize=35
+map <C-h> :NERDTreeToggle<CR>
+tmap <C-h> :NERDTreeToggle<CR>
+
+" mru
+Plug 'vim-scripts/mru.vim'
+map <C-e> :MRU<CR>
+tmap <C-e> :MRU<CR>
 
 " 注释
 Plug 'preservim/nerdcommenter'
@@ -44,9 +51,6 @@ Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries'}
 
 " 切换终端
 Plug 'PangPangPangPangPang/vim-terminal'
-
-" Ack
-" Plug 'mileszs/ack.vim'
 
 " deoplete 自动补全
 " Plug 'Shougo/deoplete.nvim'
@@ -70,6 +74,7 @@ let g:coc_global_extensions = [
             \'coc-yaml', 
             \'coc-highlight', 
             \'coc-markdownlint']
+
 " define text-obj
 xmap if <Plug>(coc-funcobj-i)
 omap if <Plug>(coc-funcobj-i)
@@ -80,11 +85,19 @@ omap ic <Plug>(coc-classobj-i)
 xmap ac <Plug>(coc-classobj-a)
 omap ac <Plug>(coc-classobj-a)
 
+" Ack
+" Plug 'mileszs/ack.vim'
+
 " fzf.vim
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 noremap <silent> <leader>f :FZF<CR>
 noremap <leader>c :Ag<Space>
+
+" tabline
+Plug 'itchyny/lightline.vim'
+set laststatus=2
+set noshowmode
 
 " vim easy align
 Plug 'junegunn/vim-easy-align'
