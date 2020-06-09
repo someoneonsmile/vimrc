@@ -134,7 +134,7 @@ Plug 'junegunn/fzf.vim'
 noremap <silent> <leader>f :FZF<CR>
 noremap <leader>c :Ag<Space>
 
-" tabline
+" lightline
 Plug 'itchyny/lightline.vim'
 set laststatus=2
 set noshowmode
@@ -176,26 +176,6 @@ Plug 'someoneonsmile/vim-plugs', {'rtp': 'swap-line'}
 " nmap <c-k> <plug>(SWAPLINE_swapUp)
 imap <c-j> <plug>(SWAPLINE_swapDown)
 imap <c-k> <plug>(SWAPLINE_swapUp)
-
-" ale
-" Plug 'dense-analysis/ale'
-" let g:ale_linters = {
-" \   'javascript': ['eslint'],
-" \   'python': ['flake8'],
-" \   'go': ['go', 'golint', 'errcheck']
-" \}
-" nmap <silent> <leader>a <Plug>(ale_next_wrap)
-" " Disabling highlighting
-" let g:ale_set_highlights = 0
-" " Only run linting when saving the file
-" let g:ale_lint_on_text_changed = 'never'
-" let g:ale_lint_on_enter = 0
-
-" deoplete 自动补全
-" Plug 'Shougo/deoplete.nvim'
-" Plug 'roxma/nvim-yarp'
-" Plug 'roxma/vim-hug-neovim-rpc'
-" let g:deoplete#enable_at_startup = 1
 
 call plug#end()
 
