@@ -1,6 +1,6 @@
 call plug#begin('~/.vim/plugged')
 
-""" {{{ 文本对象
+""" 文本对象 {{{
 
     Plug 'kana/vim-textobj-user'
 
@@ -24,7 +24,7 @@ call plug#begin('~/.vim/plugged')
 
 """ }}}
 
-""" {{{ 主题
+""" 主题 {{{
     
     set termguicolors
     
