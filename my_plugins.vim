@@ -133,6 +133,8 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 noremap <silent> <leader>f :FZF<CR>
 noremap <leader>c :Ag<Space>
+noremap <leader>b :Buffers<CR>
+noremap <leader>g :GFiles<CR>
 
 " lightline
 Plug 'itchyny/lightline.vim'

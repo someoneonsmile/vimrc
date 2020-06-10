@@ -156,13 +156,16 @@ set nu
 
 set foldlevelstart=999
 
-" 强制保存/退出 {{{
-    map <leader>q :q!<CR>
-
+" custom command {{{
     " 文件保存没有权限时
-    " :W sudo saves the file 
+    " :W sudo saves the file
     " (useful for handling the permission-denied error)
     command! W w !sudo tee % > /dev/null
+" }}}
+
+" leader key {{{
+    map <leader>q :q!<CR>
+    map <leader>cd :cd %:p:h<cr>:pwd<cr>
 " }}}
 
 
