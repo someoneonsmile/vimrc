@@ -100,30 +100,6 @@ Plug 'PangPangPangPangPang/vim-terminal'
 
 " coc.nvim
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:coc_global_extensions = [
-            \'coc-tsserver', 
-            \'coc-eslint',
-            \'coc-prettier',
-            \'coc-html', 
-            \'coc-css', 
-            \'coc-json', 
-            \'coc-emmet', 
-            \'coc-snippets', 
-            \'coc-ultisnips', 
-            \'coc-neosnippet', 
-            \'coc-yaml', 
-            \'coc-highlight', 
-            \'coc-markdownlint']
-
-" define text-obj
-xmap if <Plug>(coc-funcobj-i)
-omap if <Plug>(coc-funcobj-i)
-xmap af <Plug>(coc-funcobj-a)
-omap af <Plug>(coc-funcobj-a)
-xmap ic <Plug>(coc-classobj-i)
-omap ic <Plug>(coc-classobj-i)
-xmap ac <Plug>(coc-classobj-a)
-omap ac <Plug>(coc-classobj-a)
 
 " Ack
 " Plug 'mileszs/ack.vim'
