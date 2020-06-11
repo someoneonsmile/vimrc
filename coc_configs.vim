@@ -1,16 +1,16 @@
 let g:coc_global_extensions = [
-            \'coc-tsserver', 
+            \'coc-tsserver',
             \'coc-eslint',
             \'coc-prettier',
-            \'coc-html', 
-            \'coc-css', 
-            \'coc-json', 
-            \'coc-emmet', 
-            \'coc-snippets', 
-            \'coc-ultisnips', 
-            \'coc-neosnippet', 
-            \'coc-yaml', 
-            \'coc-highlight', 
+            \'coc-html',
+            \'coc-css',
+            \'coc-json',
+            \'coc-emmet',
+            \'coc-snippets',
+            \'coc-ultisnips',
+            \'coc-neosnippet',
+            \'coc-yaml',
+            \'coc-highlight',
             \'coc-markdownlint']
 " define text-obj
 xmap if <Plug>(coc-funcobj-i)

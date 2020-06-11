@@ -58,23 +58,23 @@
     " Ignore case when searching
     set ignorecase
 
-    " When searching try to be smart about cases 
+    " When searching try to be smart about cases
     set smartcase
 
     " Highlight search results
     set hlsearch
 
     " Makes search act like search in modern browsers
-    set incsearch 
+    set incsearch
 
     " Don't redraw while executing macros (good performance config)
-    set lazyredraw 
+    set lazyredraw
 
     " For regular expressions turn magic on
     set magic
 
     " Show matching brackets when text indicator is over them
-    set showmatch 
+    set showmatch
 
     " How many tenths of a second to blink when matching brackets
     set mat=2
@@ -145,6 +145,11 @@
     " set shell=powershell
 " }}}
 
+""" unmap {{{
+    " you can't unmap internal keybindings, instead of use <Nop>
+    " map <key> <Nop>
+
+"""}}}
 
 " leader key
 let mapleader=","
@@ -203,10 +208,9 @@ map <C-m> <Plug>NERDCommenterToggle
 " 打开的 buffer
 map <c-b> :CtrlPBuffer<cr>
 
-" 切换窗口 
+" 切换窗口
 " ^[ = Alt
 map <M-w> <C-w>w
-map <M-p> <C-w>p
 map <M-h> <C-w>h
 map <M-j> <C-w>j
 map <M-k> <C-w>k
@@ -217,17 +221,24 @@ map <M--> <C-w>-
 map <M-<> <C-w><
 map <M->> <C-w>>
 
-" <C-w> o 关闭其它所有窗口 :only
+" <C-w>o 关闭其它所有窗口 :only
 " :qa 关闭所有分屏
+" <C-w>T move split to new tab
+map <M-r> <C-w>r
 map <M-H> <C-w>H
 map <M-L> <C-w>L
 map <M-J> <C-w>J
 map <M-K> <C-w>K
 map <M-T> <C-w>T
 
+" <C-w>c :close - close split
+" <C-w>q :q - close split and quit file
+" <C-w>n :new [file]
+map <M-n> <C-w>n
 map <M-s> <C-w>s
 map <M-v> <C-w>v
 map <M-c> <C-w>c
+map <M-q> <C-w>q
 map <M-o> <C-w>o
 
 
@@ -246,15 +257,18 @@ tmap <M--> <C-w>-
 tmap <M-<> <C-w><
 tmap <M->> <C-w>>
 
+tmap <M-r> <C-w>r
 tmap <M-L> <C-w>L
 tmap <M-J> <C-w>J
 tmap <M-H> <C-w>H
 tmap <M-K> <C-w>K
 tmap <M-T> <C-w>T
 
+tmap <M-n> <C-w>n
 tmap <M-s> <C-w>s
 tmap <M-v> <C-w>v
 tmap <M-c> <C-w>c
+tmap <M-q> <C-w>q
 tmap <M-o> <C-w>o
 
 
