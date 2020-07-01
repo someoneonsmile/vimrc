@@ -104,7 +104,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " fzf.vim
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-noremap <silent> <leader>f :FZF<CR>
+noremap <silent> <leader>s :FZF<CR>
 noremap <leader>c :Ag<Space>
 noremap <leader>b :Buffers<CR>
 noremap <leader>g :GFiles<CR>
