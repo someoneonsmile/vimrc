@@ -95,9 +95,6 @@ Plug 'airblade/vim-gitgutter'
 " coc.nvim
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" Ack
-" Plug 'mileszs/ack.vim'
-
 " fzf.vim
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
