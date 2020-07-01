@@ -92,9 +92,6 @@ Plug 'groenewege/vim-less'
 " git
 Plug 'airblade/vim-gitgutter'
 
-" 切换终端
-Plug 'PangPangPangPangPang/vim-terminal'
-
 " coc.nvim
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
