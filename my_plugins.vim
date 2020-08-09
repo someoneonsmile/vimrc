@@ -70,7 +70,8 @@ Plug 'Raimondi/delimitMate'
 " vim repeat
 Plug 'tpope/vim-repeat'
 
-" vim surround
+" 改变包围方式/在两边添加
+" cs / ysiw
 Plug 'tpope/vim-surround'
 
 " 单词变体/改变连词方式(Coercion)
