@@ -59,6 +59,14 @@ Plug '/ctrlpvim/ctrlp.vim'
 " 表格对齐
 Plug 'godlygeek/tabular'
 
+" vim easy align
+Plug 'junegunn/vim-easy-align'
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+
+" 自动补登括号
+Plug 'Raimondi/delimitMate'
+
 " vim repeat
 Plug 'tpope/vim-repeat'
 
@@ -130,11 +138,6 @@ let g:lightline = {
       \ 'separator': { 'left': ' ', 'right': ' ' },
       \ 'subseparator': { 'left': ' ', 'right': ' ' }
       \ }
-
-" vim easy align
-Plug 'junegunn/vim-easy-align'
-xmap ga <Plug>(EasyAlign)
-nmap ga <Plug>(EasyAlign)
 
 " wx 小程序支持
 Plug 'chemzqm/wxapp.vim'
