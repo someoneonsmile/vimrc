@@ -48,7 +48,7 @@ let g:NERDTreeWinSize=35
 map <C-h> :NERDTreeToggle<CR>
 tmap <C-h> :NERDTreeToggle<CR>
 
-" mru
+" mru 最近文件
 Plug 'vim-scripts/mru.vim'
 map <C-e> :MRU<CR>
 tmap <C-e> :MRU<CR>
